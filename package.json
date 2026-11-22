@@ -1,6 +1,6 @@
 {
   "name": "@guihakka2/tlsdue",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Know before your TLS certificates and domains expire. Zero-dependency CLI, runs free on a GitHub Actions schedule.",
   "type": "module",
   "bin": {

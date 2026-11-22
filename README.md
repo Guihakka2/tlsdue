@@ -46,6 +46,12 @@ When something is close to expiring the job fails, and GitHub emails you.
 - **Domain registration**: expiry date through RDAP, the registries' official JSON API (bootstrap list from IANA). Works for `.com`, `.net`, `.org`, `.br`, `.dev`, `.app` and most other TLDs. Some registries hide the date or don't run RDAP (e.g. `.jp`), which is shown as skipped, not as an error.
 - **Unreachable hosts** fail too: an expired cert you can't see is still a problem.
 
+## Download (no Node.js needed)
+
+Don't have Node.js? Each [release](https://github.com/Guihakka2/tlsdue/releases/latest) has a standalone program for Windows (x64, ARM), macOS (Apple silicon, Intel) and Linux (x64, ARM). Download the file for your system, unzip it and run `tlsdue` from a terminal, with the same options as above.
+
+The programs are built by GitHub Actions from this repository's code, with a `SHA256SUMS.txt` and a [build provenance attestation](https://docs.github.com/actions/security-for-github-actions/using-artifact-attestations) (`gh attestation verify <file> -R Guihakka2/tlsdue`). They are not code-signed with a paid certificate yet, so the first run shows a warning: on Windows, SmartScreen → "More info" → "Run anyway"; on macOS, run `xattr -d com.apple.quarantine tlsdue` once.
+
 ## Options
 
 | Option | |

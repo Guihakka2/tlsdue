@@ -15,3 +15,7 @@ You will get a reply within 7 days.
 - Terminal control characters are stripped from everything printed. No telemetry, zero runtime dependencies.
 - `test/fixtures/` holds a self-signed key and certificate for `localhost`, used only by the tests and never published to npm.
 - npm releases are built by GitHub Actions with provenance; never by hand.
+
+## Standalone executables
+
+Release executables are built only by GitHub Actions (`binaries.yml`) from the tagged source with the official Node.js single executable application feature, smoke-tested, and published with a SHA256SUMS.txt and a build provenance attestation (`gh attestation verify <file> -R Guihakka2/tlsdue`). They are not code-signed with a paid certificate yet.
